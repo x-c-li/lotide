@@ -7,21 +7,18 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(array1, array2) {
-  
-  let output = true;
-
-  for (let x = 0; x < array1.length; x++) {
-    for (let y = 0; y < array2.length; y++) {
-      if (array1[x] === array2[y]) {
-        output = output;
-        x++
-      } else {
-        output = false;
-      }
-    }
+  if (array1.length !== array2.length) {
+    return false;
   }
-
-  return output;
+  for (let x = 0; x < array1.length; x++) {
+    //remember that this is an index, so the lengths are the same 
+    //for both arrays, so use the same index to refer to the numbers 
+    //in both arrays
+    if (array1[x] !== array2[x]) {
+      return false;
+    } 
+  }
+  return true;
 };
 
 
@@ -29,11 +26,11 @@ const eqArrays = function(array1, array2) {
 
 
 //TEST CASES
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
+// eqArrays([1, 2, 3], [1, 2, 3]) // => true
+// eqArrays([1, 2, 3], [3, 2, 1]) // => false
 
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+// eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
+// eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
 
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
