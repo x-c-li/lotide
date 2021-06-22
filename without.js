@@ -20,3 +20,23 @@ const assertArraysEqual = function(array1, array2) {
     console.log(`🙄️ Assertion Failed: ${array1} !== ${array2}`);
   }
 };
+
+const without = function(sourceArray, itemsToRemove) {
+  let newArray = [];
+
+  for (let source = 0; source < sourceArray.length; source++) {
+    if (sourceArray[source] !== itemsToRemove[source]) {
+      newArray.push(sourceArray[source]);
+    }
+  } 
+  return newArray;
+};
+
+//TEST SCENARIOS
+//console.log(without([1, 2, 3], [1])) // => [2, 3]
+//console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
