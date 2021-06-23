@@ -1,5 +1,5 @@
 //countOnly will take in collection of items (strings)
-// and return counts for a specific subset of those items 
+//and return counts for a specific subset of those items 
 //will not count everything
 //will return an object that represent the stats 
 
@@ -15,6 +15,7 @@ const assertEqual = function(actual, expected) {
 //allItems: an array of strings that we need to look through
 //itemsToCount: an object specifying what to count 
 
+/* THIS IS MY SOLUTION 
 const countOnly = function(allItems, itemsToCount) {
   
   let countedItems = {};
@@ -33,6 +34,24 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return countedItems;
 };
+*/
+
+//THIS IS LHL's SOLUTION
+const countOnly = function(allItems, itemsToCount) {
+  const results = {};
+
+  for (const item of allItems) {
+    if (itemsToCount[item]) {
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
+      }
+    }
+  }
+  //console.log(results);
+  return results;
+};
 
 const firstNames = [
   "Karl",
@@ -47,7 +66,7 @@ const firstNames = [
 ];
 
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-console.log(result1)
+
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
