@@ -18,21 +18,20 @@ const assertEqual = function(actual, expected) {
 const countOnly = function(allItems, itemsToCount) {
   
   let countedItems = {};
-  let count = 0
   
   for (const item in itemsToCount) {
+    let count = 0;
     if (itemsToCount.hasOwnProperty(item)) {
-      for (const name of firstNames) {
+      for (const name of allItems) {
         if (item === name && itemsToCount[item].valueOf() === true) {
           //console.log(name);
           count += 1;
           countedItems[item] = count;
-          console.log(countedItems);
         }
       }
     }
   }
-  return console.log(countedItems);
+  return countedItems;
 };
 
 const firstNames = [
@@ -47,9 +46,9 @@ const firstNames = [
   "Joe"
 ];
 
-countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-//const result1 = 
-// assertEqual(result1["Jason"], 1);
-// assertEqual(result1["Karima"], undefined);
-// assertEqual(result1["Fang"], 2);
-// assertEqual(result1["Agouhanna"], undefined);
+const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+console.log(result1)
+assertEqual(result1["Jason"], 1);
+assertEqual(result1["Karima"], undefined);
+assertEqual(result1["Fang"], 2);
+assertEqual(result1["Agouhanna"], undefined);
