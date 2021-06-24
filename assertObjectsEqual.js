@@ -57,7 +57,7 @@ const assertObjectsEqual = function(actual, expected) {
   //prints out object w key val pairs 
   const inspect = require('util').inspect; 
 
-  if (actual === expected) {
+  if (eqObjects(actual, expected)) {
     console.log(`😊️ Assertion Passed: ${inspect(actual)} === ${inspect(actual)}`);
   } else {
     console.log(`🙄️ Assertion Failed: ${inspect(actual)} !== ${inspect(actual)}`);

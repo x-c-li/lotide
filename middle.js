@@ -13,7 +13,7 @@ const eqArrays = function(array1, array2) {
       return false;
     } 
   }
-  return true;k
+  return true;
 };
 
 const assertArraysEqual = function(array1, array2) {
@@ -44,20 +44,20 @@ const middle = function(array) {
 
 
 
-// TEST CODE
+//TEST CODE
 
-//middle([1]) // => []
-//middle([1, 2]) // => []
-//assertArraysEqual(middle([1]), []);
-//assertArraysEqual(middle([1, 2]), []);
+middle([1]) // => []
+middle([1, 2]) // => []
+assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([1, 2]), []);
 
-// middle([1, 2, 3]) // => [2]
-// middle([1, 2, 3, 4, 5]) // => [3]
-// assertArraysEqual(middle([1, 2, 3]), [2]);
-// assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
+middle([1, 2, 3]) // => [2]
+middle([1, 2, 3, 4, 5]) // => [3]
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
 
 
-//middle([1, 2, 3, 4]) // => [2, 3]
-//middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
-//assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-//assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+middle([1, 2, 3, 4]) // => [2, 3]
+middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
