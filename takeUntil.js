@@ -26,7 +26,7 @@ const assertArraysEqual = function(array1, array2) {
 //returns a truthy value.
 //"slice of the array with elements taken from the beginning"
 
-const takeUntil = function(array, callback) {
+const takkeUntil = function(array, callback) {
   const output = [];
   for (const a of array) {
     if (!callback(a)) {
