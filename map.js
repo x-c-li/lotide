@@ -40,4 +40,5 @@ assertArraysEqual((map(words, word => word[0])), thing2);
 assertArraysEqual((map(words, word => word + "-esque")), thing1);
 assertArraysEqual((map(words, word => word.length)), thing3);
 
+module.exports = map;
 

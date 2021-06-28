@@ -1,3 +1,5 @@
+const findKeyByValue = require("./findKeyByValue");
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`😊️😊️😊️ Assertion Passed: ${actual} === ${expected}`);
@@ -57,3 +59,5 @@ test3 = {
 assertEqual(findKey(test1, x => x.stars === 2), "noma");
 assertEqual(findKey(test2, x => x.word.length === 5), "Tatum");
 assertEqual(findKey(test2, x => x.word.length > 23), undefined);
+
+module.exports = findKey;

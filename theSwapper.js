@@ -32,3 +32,5 @@ swapper('c', { a: 1 , b: 3, c: 3, d: 7 }, 'c', { a: 4, b: 0, c: 5 });
 // Swap!
 // object1: { a: 1 , b: 3, c: 5, d: 7 }
 // object2: { a: 4, b: 0, c: 3 }
+
+module.exports = swapper;

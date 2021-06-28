@@ -34,3 +34,5 @@ console.log(countLetters('LHL'))
 //L 2 and H 1 
 console.log(countLetters('lighthouse in the house'))
 console.log(countLetters("hello"));
+
+module.exports = countLetters;
