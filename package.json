@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@x_c_li/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects. It is a clone of the lodash JS library to practice creating various types of functions in JS",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/x-c-li/lotide.git"
   },
-  "author": "xiaowei cathy li",
+  "author": "Xiaowei Cathy Li <@xiaowei.c.li@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/x-c-li/lotide/issues"
